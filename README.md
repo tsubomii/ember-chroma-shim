@@ -1,27 +1,21 @@
 # ember-chroma-shim
+[![Build Status](https://travis-ci.org/Soliah/ember-chroma-shim.svg?branch=master)](https://travis-ci.org/Soliah/ember-chroma-shim)
+[![npm Version][npm-badge]][npm]
+[![Ember Observer Score](http://emberobserver.com/badges/ember-chroma-shim.svg)](http://emberobserver.com/addons/ember-chroma-shim)
 
-This README outlines the details of collaborating on this Ember addon.
+Shims chroma.js into ES6 module for Ember.
 
-## Installation
+## Usage
 
-* `git clone <repository-url>` this repository
-* `cd ember-chroma-shim`
-* `npm install`
-* `bower install`
+* `ember install ember-chroma-shim`
 
-## Running
+```js
+import chroma from 'chroma';
+```
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## License
 
-## Running Tests
+ember-chroma-shim is [MIT Licensed](https://github.com/Soliah/ember-chroma-shim/blob/master/LICENSE.md).
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+[npm]: https://www.npmjs.org/package/ember-chroma-shim
+[npm-badge]: https://img.shields.io/npm/v/ember-chroma-shim.svg?style=flat-square

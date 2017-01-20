@@ -1,23 +1,26 @@
 {
   "name": "ember-chroma-shim",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Shims chroma.js into ES6 module for Ember",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Christopher Chow <chris@chowie.net>",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/Soliah/ember-chroma-shim",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
   "dependencies": {
+    "broccoli-funnel": "^1.0.0",
+    "broccoli-merge-trees": "^1.1.5",
+    "chroma-js": "^1.2.1",
     "ember-cli-babel": "^5.1.7"
   },
   "devDependencies": {
@@ -29,7 +32,6 @@
     "ember-cli-htmlbars": "^1.0.10",
     "ember-cli-htmlbars-inline-precompile": "^0.3.3",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-jshint": "^2.0.1",
     "ember-cli-qunit": "^3.0.1",
     "ember-cli-release": "^0.2.9",
     "ember-cli-sri": "^2.1.0",
@@ -40,6 +42,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
+    "ember-suave": "^4.0.1",
     "ember-welcome-page": "^1.0.3",
     "loader.js": "^4.0.10"
   },
@@ -48,5 +51,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js"
 }
