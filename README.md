@@ -3,7 +3,7 @@
 [![npm Version][npm-badge]][npm]
 [![Ember Observer Score](http://emberobserver.com/badges/ember-chroma-shim.svg)](http://emberobserver.com/addons/ember-chroma-shim)
 
-Shims chroma.js into ES6 module for Ember.
+Shims [chroma.js](https://github.com/gka/chroma.js) into ES6 module for Ember.
 
 ## Usage
 
