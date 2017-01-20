@@ -39,10 +39,3 @@ function treeForBrowserFetch(vendorTree) {
 function isFastBoot() {
   return process.env.EMBER_CLI_FASTBOOT === 'true';
 }
-
-function expand(input) {
-  var dirname = path.dirname(input);
-  var file = path.basename(input);
-
-  return dirname + '/{' + file + '}';
-}
