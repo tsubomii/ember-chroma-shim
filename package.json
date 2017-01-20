@@ -1,6 +1,6 @@
 {
   "name": "ember-chroma-shim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shims chroma.js into ES6 module for Ember",
   "keywords": [
     "ember-addon"
