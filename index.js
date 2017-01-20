@@ -8,10 +8,6 @@ var mergeTrees = require('broccoli-merge-trees');
 module.exports = {
   name: 'ember-chroma-shim',
 
-  isDevelopingAddon: function() {
-    return true;
-  },
-
   included: function(app) {
     app.import('vendor/shims/chroma.js', {
       exports: {
