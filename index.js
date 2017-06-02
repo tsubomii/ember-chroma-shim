@@ -9,33 +9,28 @@ module.exports = {
   name: 'ember-chroma-shim',
 
   included: function(app) {
-    app.import('vendor/shims/chroma.js', {
-      exports: {
-        type: 'vendor',
-        chroma: ['default']
-      }
+    app.import({
+      development: 'vendor/chromajs/chroma.js',
+      production: 'vendor/chromajs/chroma.min.js'
+    }, {
+      using: [{ transformation: 'amd', as: 'chroma' }]
     });
-    app.import('vendor/chroma.js', { prepend: true });
   },
 
   treeForVendor: function(vendorTree) {
-    // if (isFastBoot()) {
-    //   return treeForNodeFetch();
-    // } else {
     return treeForBrowserFetch(vendorTree);
-    // }
   },
 };
 
 function treeForBrowserFetch(vendorTree) {
-  var chromaJSPath = require.resolve('chroma-js');
-  var chromaPath = path.dirname(chromaJSPath);
-  var chromaJS = path.basename(chromaJSPath);
+  var chromaDir = path.dirname(require.resolve('chroma-js'));
+  var chromaFiles = ['chroma.js', 'chroma.min.js'];
 
-  var chromaTree = new Funnel(chromaPath, { files: [chromaJS] });
-  return mergeTrees([vendorTree, chromaTree]);
-}
+  var chromaTree = new Funnel(chromaDir, { files: chromaFiles, destDir: '/chromajs' });
 
-function isFastBoot() {
-  return process.env.EMBER_CLI_FASTBOOT === 'true';
+  if (vendorTree) {
+    return mergeTrees([vendorTree, chromaTree]);
+  }
+
+  return chromaTree;
 }

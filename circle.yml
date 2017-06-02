@@ -1,0 +1,15 @@
+machine:
+ node:
+   version: 6.10.3
+dependencies:
+  cache_directories:
+    - "/opt/circleci/nodejs/v6.10.3/lib/node_modules"
+    - "/opt/circleci/nodejs/v6.10.3/bin"
+    - "node_modules"
+  pre:
+    - type ember || npm -g install ember-cli
+  override:
+    - npm install
+test:
+  override:
+    - npm test
