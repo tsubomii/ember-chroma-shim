@@ -1,4 +1,6 @@
 # ember-chroma-shim
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/kinesisptyltd/ember-chroma-shim.svg)](https://greenkeeper.io/)
 [![CircleCI](https://circleci.com/gh/kinesisptyltd/ember-chroma-shim.svg?style=shield)](https://circleci.com/gh/kinesisptyltd/ember-chroma-shim)
 [![npm Version][npm-badge]][npm]
 [![Ember Observer Score](http://emberobserver.com/badges/ember-chroma-shim.svg)](http://emberobserver.com/addons/ember-chroma-shim)
