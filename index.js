@@ -4,6 +4,7 @@
 var path = require('path');
 var Funnel = require('broccoli-funnel');
 var mergeTrees = require('broccoli-merge-trees');
+var fbTransform = require('fastboot-transform');
 
 module.exports = {
   name: 'ember-chroma-shim',
@@ -29,7 +30,7 @@ function treeForBrowserFetch(vendorTree) {
   var chromaTree = new Funnel(chromaDir, { files: chromaFiles, destDir: '/chromajs' });
 
   if (vendorTree) {
-    return mergeTrees([vendorTree, chromaTree]);
+    return mergeTrees([vendorTree, fbTransform(chromaTree)]);
   }
 
   return chromaTree;
